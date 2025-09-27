@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SKO Digital Marketing Services</title>
+  <meta name="description" content="Join our team and build what matters. Explore roles, culture, benefits, and apply in minutes." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Sticky Nav -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a class="brand" href="#" aria-label="Home">
+      <img src="assets/logo.png" alt="YourBrand logo" class="brand__logo" width="32" height="32" />
+        <span class="brand__name">SKO Digital Marketing</span>
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#roles">Open Roles</a>
+        <a href="#perks">Perks</a>
+        <a href="#culture">Culture</a>
+        <a href="#faqs">FAQs</a>
+        <a href="#apply" class="btn btn--sm btn--primary">Apply Now</a>
+      </nav>
+      <button class="nav__menu" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <div class="hero__bg" aria-hidden="true">
+      <div class="blob blob--1"></div>
+      <div class="blob blob--2"></div>
+      <div class="grid"></div>
+    </div>
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <p class="eyebrow">Make your brand stand out</p>
+        <h1>Don't pedal hard, Accelerate Smart</h1>
+        <p class="sub">
+          We’re the team of people who will help you achive way more growth with less effort. We craft data-driven growth strategies for your brand.
+        </p>
+        <div class="actions">
+          <a href="#roles" class="btn btn--primary">Brands we helped</a>
+          <a href="#apply" class="btn btn--ghost">Get in touch with us</a>
+        </div>
+        <ul class="trust">
+          <li>Remote‑friendly</li>
+          <li>Transparent pay</li>
+          <li>Fast feedback</li>
+        </ul>
+      </div>
+      <div class="hero__card" role="img" aria-label="Team culture preview">
+        <div class="stats">
+          <div><strong>25+</strong><span>brands scaled</span></div>
+          <div><strong>4.8★</strong><span>team happiness</span></div>
+          <div><strong>100%</strong><span>ownership</span></div>
+        </div>
+        <div class="hero__quote">
+          “We create, we learn, we celebrate.”
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Join -->
+  <section class="why">
+    <div class="container">
+      <div class="section__head">
+        <h2>Why you'll love working with us</h2>
+        <p>At SKO Digital Marketing, we believe in turning bold ideas into measurable impact. With a passion for performance and a deep understanding of branding, communication, and digital platforms, we’ve consistently driven success for our clients—earning industry recognition along the way.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <h3>Creative Strong-arm</h3>
+          <p>When the creativity and productivity of other agencies end, it is from where we start.</p>
+        </article>
+        <article class="card">
+          <h3>Learn crazy fast</h3>
+          <p>We move quickly with thoughtful experiments, retros, and open feedback.</p>
+        </article>
+        <article class="card">
+          <h3>Work that matters</h3>
+          <p>Your vision our creativity, We help you reach the goals you aspire to see complete.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brands Hwlped -->
+  <section class="roles" id="roles" aria-labelledby="roles-heading">
+    <div class="container">
+      <div class="section__head">
+        <h2 id="roles-heading">Brands Helped</h2>
+      <div class="rolelist" id="rolelist" role="list">
+        <div class="brands-grid"></div>
+          <div class="brand-card" tabindex="0" aria-label="Brand 1" onclick="showBrandInfo('brand1')">
+            <img src="assets/brand 1.png" alt="Brand 1 Logo" width="80" height="80" />
+            <span class="brand-card__name">Brand One</span>
+          </div>
+          <div class="brand-card" tabindex="0" aria-label="Brand 2" onclick="showBrandInfo('brand2')">
+            <img src="assets/brand 2.png" alt="Brand 2 Logo" width="80" height="80" />
+            <span class="brand-card__name">Brand Two</span>
+          </div>
+          <div class="brand-card" tabindex="0" aria-label="Brand 3" onclick="showBrandInfo('brand3')">
+            <img src="assets/brand 3.png" alt="Brand 3 Logo" width="80" height="80" />
+            <span class="brand-card__name">Brand Three</span>
+          </div>
+          <!-- Add more brands as needed -->
+        </div>
+        <div id="brand-info-modal" class="brand-info-modal" aria-modal="true" role="dialog" hidden>
+          <div class="brand-info-content">
+            <button class="brand-info-close" onclick="closeBrandInfo()" aria-label="Close">&times;</button>
+            <div id="brand-info-details"></div>
+          </div>
+        </div>
+        <script>
+          const brandDetails = {
+            brand1: {
+              name: "Brand One",
+              description: "Brand One is a leading e-commerce platform. We helped them increase their conversion rate by 30% through targeted campaigns.",
+              website: "https://brandone.com"
+            },
+            brand2: {
+              name: "Brand Two",
+              description: "Brand Two is a fintech startup. Our SEO and content strategy boosted their organic traffic by 50%.",
+              website: "https://brandtwo.com"
+            },
+            brand3: {
+              name: "Brand Three",
+              description: "Brand Three is a global fashion retailer. We managed their social media ads, resulting in a 3x ROAS.",
+              website: "https://brandthree.com"
+            }
+            // Add more brand details as needed
+          };
+
+          function showBrandInfo(brandKey) {
+            const info = brandDetails[brandKey];
+            if (info) {
+              document.getElementById('brand-info-details').innerHTML = `
+                <h3>${info.name}</h3>
+                <p>${info.description}</p>
+                <a href="${info.website}" target="_blank" rel="noopener">Visit Website</a>
+              `;
+              document.getElementById('brand-info-modal').hidden = false;
+            }
+          }
+
+          function closeBrandInfo() {
+            document.getElementById('brand-info-modal').hidden = true;
+            document.getElementById('brand-info-details').innerHTML = '';
+          }
+        </script>
+      </div>
+    </div>
+  </section>
+
+  <!-- Perks -->
+  <section class="perks" id="perks">
+    <div class="container">
+      <div class="section__head">
+        <h2>Services We Offer</h2>
+        <p>Designed to support your vision and give what's best for your brand.</p>
+      </div>
+      <div class="perks__grid">
+        <div class="perk"><h3>Creative & Communication</h3><p>Adding and uplifting the brand psyche with communication & creative outlook</p></div>
+        <div class="perk"><h3>Search Engine Marketing</h3><p>Ensuring more visibility for your brand and more business for you</p></div>
+        <div class="perk"><h3>Digital Marketing</h3><p>Get the right marketing on the digital domain to reach out to billions of users</p></div>
+        <div class="perk"><h3>Website Development</h3><p>Make your brand/business stand out online kick ass is not a formal pharse and Apps</p></div>
+        <div class="perk"><h3>AD Management</h3><p>From creating Ads to running them and churning out leads, we do it all for you</p></div>
+        <div class="perk"><h3>Social Media Marketing</h3><p>Connect and interact with billions of users on social media with the right content</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Culture -->
+  <section class="culture" id="culture">
+    <div class="container">
+      <div class="section__head">
+        <h2>How we work</h2>
+        <p>Our principles keep us aligned and moving fast.</p>
+      </div>
+      <ol class="pillars">
+        <li><strong>Be clear.</strong> Clarity beats clever.</li>
+        <li><strong>Own outcomes.</strong> Results > activity.</li>
+        <li><strong>Stay curious.</strong> Tests over debates.</li>
+        <li><strong>Be kind.</strong> High standards, low ego.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section class="faqs" id="faqs">
+    <div class="container">
+      <div class="section__head">
+        <h2>FAQs</h2>
+        <p>Answers to common questions from candidates.</p>
+      </div>
+      <div class="accordion" id="faq-accordion">
+        <details>
+          <summary>What does your interview process look like?</summary>
+          <div class="details-body">
+            <p>Intro call → skills chat → paid take‑home → final chat. We move quickly and give feedback.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Do you hire remotely?</summary>
+          <div class="details-body">
+            <p>Yes. We’re remote‑friendly with optional office days for those who prefer hybrid.</p>
+          </div>
+        </details>
+        <details>
+          <summary>How should I prepare?</summary>
+          <div class="details-body">
+            <p>Share work you’re proud of, be candid about tradeoffs, and bring questions!</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Apply -->
+  <section class="apply" id="apply">
+    <div class="container">
+      <div class="section__head">
+        <h2>Apply in 2 minutes</h2>
+        <p>Tell us about yourself. A human reads every application.</p>
+      </div>
+      <form class="form" id="apply-form" novalidate>
+        <div class="grid2">
+          <label>Full name
+            <input type="text" name="name" required />
+          </label>
+          <label>Email
+            <input type="email" name="email" required />
+          </label>
+          <label>Role you’re applying for
+            <input type="text" name="role" placeholder="e.g., SEO Strategist" required />
+          </label>
+          <label>Location
+            <input type="text" name="location" placeholder="City / Remote" required />
+          </label>
+        </div>
+        <label>LinkedIn or Portfolio
+          <input type="url" name="portfolio" placeholder="https://..." />
+        </label>
+        <label>Why you?
+          <textarea name="about" rows="4" placeholder="Share 3–5 bullet points that show fit." required></textarea>
+        </label>
+        <div class="form__actions">
+          <button type="submit" class="btn btn--primary">Submit application</button>
+          <p class="form__msg" id="form-msg" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Floating CTAs -->
+  <div class="floating-ctas" aria-label="Contact options">
+    <a class="fab" href="https://wa.me/910000000000" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">WhatsApp</a>
+    <a class="fab fab--secondary" href="https://cal.com/yourbrand/discovery" target="_blank" rel="noopener" aria-label="Book a discovery call">Book a Call</a>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> YourBrand. Make something people want.</p>
+      <nav class="footer__links" aria-label="Footer">
+        <a href="#top">Back to top</a>
+        <a href="#roles">Roles</a>
+        <a href="#apply">Apply</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
